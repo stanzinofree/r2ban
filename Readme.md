@@ -149,7 +149,7 @@ v 0.1
 
 <a name="license" />
 ## License
-This software is released under [LGPL](http://www.gnu.org/licenses/lgpl-2.1.txt "LGPL")
+This software is released under [GPL v3](http://www.gnu.org/licenses/gpl-3.0.txt "GPL v3")
 
 <a name="credits" />
 ## Credits
