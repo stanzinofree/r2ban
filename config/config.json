@@ -1,5 +1,5 @@
 {
-	"from" : "Security Team Romasistemi <root@agasoul.homeip.net>",
-	"cc"   : "alessandro.middei@lnf.infn.it",
-	"team_name" : "Romasistemi Security Team"
+	"from" : "Security Team <root@youraddress.com>",
+	"cc"   : "your_cc_adress@youraddress.com",
+	"team_name" : "Security Team"
 }

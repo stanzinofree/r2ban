@@ -137,7 +137,7 @@ if __FILE__ == $0
 		:subject => "Abuse on: "+servic+" from: "+ip+" at: "+date,
 		:body => body,
 		:content_type => 'text/html; charset=UTF-8',
-		:to => 'alessandro.middei@gmail.com',
+		:to => opt[:to],
 		:date => date,
 	}
 	logger("executed on: "+date)
