@@ -1,0 +1,77 @@
+<table class="row callout">
+  <tr>
+    <td class="wrapper last">
+      <table class="twelve columns">
+        <tr>
+          <td class="panel">
+            <p>This Report was sent using 'R2BAN report generator' made by <a href="http://www.stanzinofree.net/">Middei Alessandro</a>.</p>
+            <p> The sources of this software relased under Gnu\GPL v3 are on Github at link: <a href="https://github.com/stanzinofree/r2ban\">R2ban</a></p>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+<table class="row footer">
+  <tr>
+    <td class="wrapper">
+
+      <table class="six columns">
+        <tr>
+          <td class="left-text-pad">
+
+            <h5>Software Credits:</h5>
+
+            <table class="tiny-button">
+              <tr>
+                <td>
+                  <a href="https://github.com/fail2ban/fail2ban">Fail2ban on Github</a>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table class="tiny-button">
+              <tr>
+                <td>
+                  <a href="http://zurb.com/ink/">Ink css</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+    </td>
+    <td class="wrapper last">
+      <table class="six columns">
+        <tr>
+          <td class="last right-text-pad">
+            <h5>Author Info:</h5>
+            <p>Email: <a href="mailto:alexitconsulting@gmail">alexitconsulting@gmail</a></p>
+            <p>WebSite: <a href="http://www.stanzinofree.net">Stanzinofree.net</a></p>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="row">
+  <tr>
+    <td class="wrapper last">
+      <table class="twelve columns">
+        <tr>
+          <td align="center">
+            <center>
+              <p style="text-align:center;"><a href="http://www.stanzinofree.net/r2ban/terms.html">Terms</a> | <a href="http://www.stanzinofree.net/r2ban/privacy.html">Privacy</a></p>
+            </center>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
