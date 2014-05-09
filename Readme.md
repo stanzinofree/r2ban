@@ -63,7 +63,7 @@ In the config folder there are 4 files:
 - [banner.json](#banner.json)
 - [banner.txt](#banner.txt)
 - [config.json](#config.json)
-- [r2ban.erb](#config.json)
+- [mail_config.json](#mail_config.json)
 
 <a name="banner.json" />
 ### banner.json
@@ -75,15 +75,24 @@ This file contain the footer part of the mail, you can modify it if you want but
 
 <a name="config.json" />
 ### config.json
+This file contain some configuration that you can modify:
+- prod - can be true or false, when it's false the mail is not send
+- noise - can be true or false, is thinked to be level value
+- template - the name of template(without .erb) you want use, it must be placed in /template/ 
+
+<a name="mail_config.json" />
+### mail_config.json
 This contain the values you had to change to best use r2ban:
 - from - is the address you use to send mail from
 - cc - is the address you use to cc mail (the to is the abuse address)
 - team_name - is used as sign of mail, it's not vital but look like me geeky :)
 
+In the template folder there is 1 template file:
+- [r2ban.erb](#r2ban.erb)
+
 <a name="r2ban.erb" />
 ### r2ban.erb
 This is the core of the mail, it contain the css, the html structure and the text used for mail, it is an erb template so I suggest to copy this file before make change.
-In the next release I want move this file in a separate folder (template) and separate structure from css and html and choose the template name in a config file so you can change templates in better easy way.
 If you want a guide to modify this file you can follow my blog [Stanzinofree](http://www.stanzinofree.net) where there are how-to articles to modify erb files and create new ones
 
 
@@ -105,11 +114,6 @@ If Fail2ban is installed in default folders the steps are:
 If you want you can find an r2ban.conf on my site at this link [r2ban.conf](http://www.stanzinofree.net/r2ban/r2ban.conf)
 
 The most important thing is the actionban line:
-
-    actionban = /opt/r2ban/r2ban.rb <ip> <name>
-
-:heavy_exclamation_mark: **ATTENTION**
-if you have Centos 5 the correct line is:
 
     actionban = /usr/local/rvm/wrappers/ruby-2.1.1@r2ban/ruby /opt/r2ban/r2ban.rb <ip> <name>
 
@@ -135,15 +139,19 @@ So in a tipical Jail we modify the action line in this way
 <a name="changelog">
 ## Changelog
 
+v 0.2
+- Separated mail config from software config
+- Create template folder and template name value variable in config file
+- Insert not prod function to test variable and test workflow of software
+- If not abuse mail found use cc as to address
+
 v 0.1
 - Release software
 
 <a name="todo" />
 ## TODO
-- Creation of template separate folder
 - Division from text template and css template
 - Creation of software config file and move actual config in mail_conf file
-- No abuse mail found function
 - Updating Software function
 - Attach log function
 
