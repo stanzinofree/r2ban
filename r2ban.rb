@@ -80,11 +80,8 @@ def parse_text(temp_file)
     	#regex to find mail address if in the line there is abuse contact
     	abuse = line.match(/([\w\d\.]+)@([\w\d]+)[\.]([\w\d\.]+)/)
     	return abuse
-    else
-  		#This return in future will be encoded to launch new mail of non found whois
-    	return "none"
     end
-end
+	end
 end
 
 # This part use ERB to read the mail template and compose it with variables
@@ -132,6 +129,14 @@ if __FILE__ == $0
 	ban_file = @local_dir+'banner.json'
 	opt = parse_prepare()
 	abuse = generate_parse_remove_mail(ip, temp_file)
+	if abuse
+		abuse_mail = abuse
+		#puts abuse_mail
+		logger("the address is: "+abuse_mail.to_s)
+	else
+    	logger("Address not found so I use your cc address")
+    	abuse_mail = opt[:cc]
+    end
 	body = compose_body(ip, servic, opt[:team_name], date)
 	local_opt = {
 		:subject => "Abuse on: "+servic+" from: "+ip+" at: "+date,
